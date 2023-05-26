@@ -1,5 +1,5 @@
 pkgname=somebar-wayrice
-pkgver=1.0.3.r9.c32b078
+pkgver=1.0.3.r10.ac97bc6
 pkgrel=1
 pkgdesc="dwm-like bar for dwl"
 arch=('x86_64')
@@ -19,11 +19,6 @@ conflicts=("${pkgname%-git}")
 #	fi
 #}
 
-pkgver() {
-	cd ../
-	printf "%s" "$(git describe --long | sed 's/^v//;s/\([^-]*-\)g/r\1/;s/-/./g')"
-}
-
 build() {
 	cd ../
 	arch-meson build
@@ -32,6 +27,6 @@ build() {
 
 package() {
 	cd ../
-	meson install -C build --destdir "$pkgdir"
+	meson install -C build --destdir "$pkgdir/local"
 }
 
