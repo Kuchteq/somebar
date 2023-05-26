@@ -27,6 +27,6 @@ build() {
 
 package() {
 	cd ../
-	meson install -C build --destdir "$pkgdir/local"
+	meson install -C build --destdir "$pkgdir/usr"
 }
 
