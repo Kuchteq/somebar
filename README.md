@@ -1,4 +1,4 @@
-# somebar + someblocks - dwm-like bar for dwl, now with blocks
+# somebar - dwm-like bar for dwl
 
 ![Screenshot](screenshot.png)
 
@@ -8,12 +8,10 @@ The mailing list for this project is
 # Mariusz's build
 The only change is my home brew "hide-vacant-changes-with-style" patch that is based off medanisjbara 
 which (surprise) hides inactive tags, but mine also adds color to the active tag (which can be easily 
-customized in src/config.h). Besides that there are color and font changes in config.h
+customized in src/config.h). Besides that there are color and font changes in config.h. In addition
+there is a PKGBUILD file integrated within the repository for easier MARBS install and overall use.
 
-The more interesting part lies in the someblocks folder, whose config.h file houses the different
-statuses. These can get updated either on interval bases, or via a kill signal. Hence to
-get an immediate update on your volume via the sb-volume script, you'd need to 
-`kill -44 $(pidof someblocks)`.
+The more interesting and important repo is [someblocks](https://github.com/Kuchteq/someblocks). 
 
 ## Dependencies
 
